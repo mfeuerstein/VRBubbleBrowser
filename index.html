@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VR Bubble Browser</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="js.js">
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.querySelector('a-scene').enterVR();
+    });
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('linker', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                //this.setAttribute('opacity', "0");
+                window.location.href = 'Test.html';
+            });
+        }
+    });
+    </script>
+    <script type="text/javascript">
+    window.addEventListener('vrdisplayactivate'function(evt) {
+                vrDisplay.requestPresent([{ source: myCanvas }]).then(function() {
+                        var scene = document.querySelector('a-scene');
+                        if (scene.hasLoaded) {
+                            scene.enterVR();
+                        } else {
+                            this.el.addEventListener('loaded', function() { document.querySelector('a-scene').enterVR(); });
+                        );
+                }
+            }
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('sublink', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    // <a-animation attribute="position" to="1 3.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+
+
+                    document.querySelector('#player').setAttribute('position', '40 2.2 39');
+                    document.querySelector('#base1').setAttribute('visible', 'false');
+                    document.querySelector('#base2').setAttribute('visible', 'false');
+                    document.querySelector('#base3').setAttribute('visible', 'false');
+                    document.querySelector('#base4').setAttribute('visible', 'false');
+                    document.querySelector('#base5').setAttribute('visible', 'false');
+
+                    document.querySelector('#dase1').setAttribute('visible', 'true');
+                    document.querySelector('#dase2').setAttribute('visible', 'true');
+                    document.querySelector('#dase3').setAttribute('visible', 'true');
+                    document.querySelector('#dase4').setAttribute('visible', 'true');
+                    document.querySelector('#dase5').setAttribute('visible', 'true');
+
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('sublink2', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    //
+                    document.querySelector('#player').setAttribute('position', '40 2.2 -37');
+                    document.querySelector('#base1').setAttribute('visible', 'false');
+                    document.querySelector('#base2').setAttribute('visible', 'false');
+                    document.querySelector('#base3').setAttribute('visible', 'false');
+                    document.querySelector('#base4').setAttribute('visible', 'false');
+                    document.querySelector('#base5').setAttribute('visible', 'false');
+
+                    document.querySelector('#case1').setAttribute('visible', 'true');
+                    document.querySelector('#case2').setAttribute('visible', 'true');
+                    document.querySelector('#case3').setAttribute('visible', 'true');
+                    document.querySelector('#case4').setAttribute('visible', 'true');
+                    document.querySelector('#case5').setAttribute('visible', 'true');
+
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('sublink3', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    document.querySelector('#player').setAttribute('position', '-40 2.2 -37');
+                    document.querySelector('#base1').setAttribute('visible', 'false');
+                    document.querySelector('#base2').setAttribute('visible', 'false');
+                    document.querySelector('#base3').setAttribute('visible', 'false');
+                    document.querySelector('#base4').setAttribute('visible', 'false');
+                    document.querySelector('#base5').setAttribute('visible', 'false');
+
+                    document.querySelector('#ease1').setAttribute('visible', 'true');
+                    document.querySelector('#ease2').setAttribute('visible', 'true');
+                    document.querySelector('#ease3').setAttribute('visible', 'true');
+                    document.querySelector('#ease4').setAttribute('visible', 'true');
+                    document.querySelector('#ease5').setAttribute('visible', 'true');
+
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('sublink4', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    document.querySelector('#player').setAttribute('position', '-40 2.2 -37');
+                    document.querySelector('#base1').setAttribute('visible', 'false');
+                    document.querySelector('#base2').setAttribute('visible', 'false');
+                    document.querySelector('#base3').setAttribute('visible', 'false');
+                    document.querySelector('#base4').setAttribute('visible', 'false');
+                    document.querySelector('#base5').setAttribute('visible', 'false');
+
+                    document.querySelector('#ease1').setAttribute('visible', 'true');
+                    document.querySelector('#ease2').setAttribute('visible', 'true');
+                    document.querySelector('#ease3').setAttribute('visible', 'true');
+                    document.querySelector('#ease4').setAttribute('visible', 'true');
+                    document.querySelector('#ease5').setAttribute('visible', 'true');
+
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('sublink5', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    document.querySelector('#player').setAttribute('position', '-40 2.2 -37');
+                    document.querySelector('#base1').setAttribute('visible', 'false');
+                    document.querySelector('#base2').setAttribute('visible', 'false');
+                    document.querySelector('#base3').setAttribute('visible', 'false');
+                    document.querySelector('#base4').setAttribute('visible', 'false');
+                    document.querySelector('#base5').setAttribute('visible', 'false');
+
+                    document.querySelector('#ease1').setAttribute('visible', 'true');
+                    document.querySelector('#ease2').setAttribute('visible', 'true');
+                    document.querySelector('#ease3').setAttribute('visible', 'true');
+                    document.querySelector('#ease4').setAttribute('visible', 'true');
+                    document.querySelector('#ease5').setAttribute('visible', 'true');
+
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('backlink', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    document.querySelector('#player').setAttribute('position', '0 2.2 4');
+                    document.querySelector('#dase1').setAttribute('visible', 'false');
+                    document.querySelector('#dase2').setAttribute('visible', 'false');
+                    document.querySelector('#dase3').setAttribute('visible', 'false');
+                    document.querySelector('#dase4').setAttribute('visible', 'false');
+                    document.querySelector('#dase5').setAttribute('visible', 'false');
+
+
+                    document.querySelector('#base1').setAttribute('visible', 'true');
+                    document.querySelector('#base2').setAttribute('visible', 'true');
+                    document.querySelector('#base3').setAttribute('visible', 'true');
+                    document.querySelector('#base4').setAttribute('visible', 'true');
+                    document.querySelector('#base5').setAttribute('visible', 'true');
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    });
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('backlink2', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    document.querySelector('#player').setAttribute('position', '0 2.2 4');
+                    document.querySelector('#case1').setAttribute('visible', 'false');
+                    document.querySelector('#case2').setAttribute('visible', 'false');
+                    document.querySelector('#case3').setAttribute('visible', 'false');
+                    document.querySelector('#case4').setAttribute('visible', 'false');
+                    document.querySelector('#case5').setAttribute('visible', 'false');
+
+
+                    document.querySelector('#base1').setAttribute('visible', 'true');
+                    document.querySelector('#base2').setAttribute('visible', 'true');
+                    document.querySelector('#base3').setAttribute('visible', 'true');
+                    document.querySelector('#base4').setAttribute('visible', 'true');
+                    document.querySelector('#base5').setAttribute('visible', 'true');
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    });
+    </script>
+    <script type="text/javascript">
+    AFRAME.registerComponent('backlink3', {
+        init: function() {
+            this.el.addEventListener('click', function(evt) {
+                console.log("Biii");
+                // document.querySelector('#player').setAttribute('position', '40 2.2 40')
+                var t = 0;
+
+                function render() {
+                    t += 0.01;
+                    requestAnimationFrame(render);
+
+                    document.querySelector('#player').setAttribute('position', '0 2.2 4');
+                    document.querySelector('#ease1').setAttribute('visible', 'false');
+                    document.querySelector('#ease2').setAttribute('visible', 'false');
+                    document.querySelector('#ease3').setAttribute('visible', 'false');
+                    document.querySelector('#ease4').setAttribute('visible', 'false');
+                    document.querySelector('#ease5').setAttribute('visible', 'false');
+
+
+                    document.querySelector('#base1').setAttribute('visible', 'true');
+                    document.querySelector('#base2').setAttribute('visible', 'true');
+                    document.querySelector('#base3').setAttribute('visible', 'true');
+                    document.querySelector('#base4').setAttribute('visible', 'true');
+                    document.querySelector('#base5').setAttribute('visible', 'true');
+                    // cylinder.setAttribute('position', '3 ' + (Math.sin(t * 2) + 1) + ' 0');
+                }
+                render();
+            });
+        }
+    });
+    </script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+        <img id="skyTexture" src="assets\nightsky4.jpg">
+         <img id="mercuryTexture" src="assets\mercury.jpg">
+         <img id="venusTexture" src="assets\venus.jpg">
+         <img id="marsTexture" src="assets\mars.jpg">
+         <img id="jupiterTexture" src="assets\jupiter.jpg">
+         <img id="saturnTexture" src="assets\saturn.jpg">
+        </a-assets>
+        <a-sky src="#skyTexture"></a-sky>
+
+        <a-sphere id="base1" position="1 3 -7" sublink="" radius="1.25" src="#mercuryTexture" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave;">
+            <a-animation attribute="position" to="1 3.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-plane id ="base1_Lbl" position = "1 5 -7" height = "1" width = "3" color="black" opacity="0.3" rotation="0 0 0">
+			<a-text value="VR" width="14" align = "center"></a-text>
+			<a-animation attribute="position" to="1 5.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+        </a-plane>
+
+
+        <a-sphere id="base2" position="8 4 -7" sublink2="" radius="1.25" src="#venusTexture" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave;">
+            <a-animation attribute="position" to="8 4.3 -7" direction="alternate" dur="1400" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-plane id ="base2_Lbl" position = "8 6 -7" height = "1" width = "3" color="black" opacity="0.3" rotation="0 0 0">
+			<a-text value="News" width="14" align = "center"></a-text>
+			<a-animation attribute="position" to="8 6.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+        </a-plane>
+
+
+        <a-sphere id="base3" position="3.5 -1 -7" sublink3="" radius="1.25" src="#marsTexture" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="3.5 -.7 -7" direction="alternate" dur="1200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-plane id ="base3_Lbl" position = "3.5 1 -7" height = "1" width = "3" color="black" opacity="0.3" rotation="0 0 0">
+			<a-text value="Games" width="14" align = "center"></a-text>
+			<a-animation attribute="position" to="3.5 1.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+        </a-plane>
+
+        <a-sphere id="base4" position="-4 1 -7" sublink4="" radius="1.25" src="#jupiterTexture" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-4 1.3 -7" direction="alternate" dur="2200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-plane id ="base4_Lbl" position = "-4 3 -7" height = "1" width = "3" color="black" opacity="0.3" rotation="0 0 0">
+			<a-text value="Scenery" width="14" align = "center"></a-text>
+			<a-animation attribute="position" to="-4 3.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+        </a-plane>
+
+        <a-sphere id="base5" position="-7 3 -7" sublink5="" radius="1.25" src="#saturnTexture" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-7 3.3 -7" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-plane id ="base5_Lbl" position = "-7 5 -7" height = "1" width = "3" color="black" opacity="0.3" rotation="0 0 0">
+			<a-text value="Reddit" width="14" align = "center"></a-text>
+			<a-animation attribute="position" to="-7 5.3 -7" direction="alternate" dur="1700" repeat="indefinite"></a-animation>
+        </a-plane>
+
+
+        <a-sphere id="dase1" visible=false link="href:https://vesta.janusvr.com/widget?url=https%3A%2F%2Fvesta.janusvr.com%2Faussie%2Fhuman-music&image=https%3A%2F%2Fthumbnails-janusvr.s3-us-west-2.amazonaws.com%2Fbe681f9bf9319d9b73651f2e47e5e218%2Fthumb.jpg&description&title=Human+Music&autoplay=true; title:Janus Human Music"  position="41 3 33" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="41 3.3 33" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="dase2" visible=false link="href:https://www.youtube.com/channel/UCnO5ygba3vsJG9IeZLndaTQ; title:YouTube" sublink2="" position="48 4 33" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="48 4.3 33" direction="alternate" dur="1400" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="dase3" visible=false link="href:#; title:Back to home" backlink="" position="43.5 -1 33" radius="1.25" color="blue" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="43.5 -.7 33" direction="alternate" dur="1200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="dase4" visible=false link="href:https://vesta.janusvr.com/widget?url=https%3A%2F%2Fvesta.janusvr.com%2Fspyduck%2Fvinesauce-plaza&image=https%3A%2F%2Fthumbnails-janusvr.s3-us-west-2.amazonaws.com%2Fd0f682d70d6d56096913197cfae25a0a%2Fthumb.jpg&description&title=Vinesauce+Plaza&autoplay=true; title:Vinesauce Plaza"  position="36 1 33" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="36 1.3 33" direction="alternate" dur="2200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="dase5" visible=false link="href:https://vesta.janusvr.com/widget?url=https%3A%2F%2Fvesta.janusvr.com%2Faussie%2Fart-gallery-compassion&image=https%3A%2F%2Fthumbnails-janusvr.s3-us-west-2.amazonaws.com%2Fdc5bc45fe0416f5da798053320e63ef0%2Fthumb.jpg&description&title=Art+Gallery+-+Compassion&autoplay=true; title:Gallery" position="33 3 33" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="33 3.3 33" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+
+        <a-sphere id="case1" visible=false link="href:Test.html; title:Tital"  position="41 3 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="41 3.3 -47" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="case2" visible=false link="href:Test.html; title:Tital"  position="48 4 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="48 4.3 -47" direction="alternate" dur="1400" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="case3" visible=false link="href:#; title:Back to home" backlink2="" position="43.5 -1 -47" radius="1.25" color="blue" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="43.5 -.7 -47" direction="alternate" dur="1200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="case4" visible=false link="href:Test.html; title:Tital"  position="36 1 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="36 1.3 -47" direction="alternate" dur="2200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="case5" visible=false link="href:Test.html; title:Tital" position="33 3 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="33 3.3 -47" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+
+        <a-sphere id="ease1" visible=false link="href:Test.html; title:Tital"  position="-39 3 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-39 3.3 -47" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="ease2" visible=false link="href:Test.html; title:Tital"  position="-32 4 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-32 4.3 -47" direction="alternate" dur="1400" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="ease3" visible=false link="href:#; title:Back to home" backlink3="" position="-37.5 -1 -47" radius="1.25" color="blue" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-37.5 -.7 -47" direction="alternate" dur="1200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="ease4" visible=false link="href:Test.html; title:Tital"  position="-44 1 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-44 1.3 -47" direction="alternate" dur="2200" repeat="indefinite"></a-animation>
+        </a-sphere>
+        <a-sphere id="ease5" visible=false link="href:Test.html; title:Tital" position="-47 3 -47" radius="1.25" color="#EF2D5E" event-set__down="_event: mouseenter; " event-set__leave="_event: mouseleave; opacity :1">
+            <a-animation attribute="position" to="-47 3.3 -47" direction="alternate" dur="1900" repeat="indefinite"></a-animation>
+        </a-sphere>
+
+
+
+        <a-text id="cylinderText" value="This is a cylinder" align="center" color="#FFF" visible="false" position="0 -0.55 0.55" geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+        </a-cylinder>
+
+        <a-entity id="player" position="0 2.2 4">
+            <a-entity camera look-controls wasd-controls>
+                <a-entity id="mouse" position="0 0 -3" geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;" material="color: cyan; shader: flat" cursor="maxDistance: 30; fuse: true">
+                    <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+                </a-entity>
+            </a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
